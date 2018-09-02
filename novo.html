@@ -10,7 +10,13 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
 }
+
+h1 {
+    font-size: 2em;
+}
+
 
 body{
     background:
@@ -40,7 +46,7 @@ footer {
 body {
     display: grid;
     min-height: 100vh;
-    grid-template-columns:  15fr 1fr;
+    grid-template-columns:  15fr 2fr;
     grid-template-rows: 100vh 500px 150px;
     grid-template-areas:
         'conteudo cabecalho'
@@ -48,21 +54,64 @@ body {
         'rodape rodape';
 }
 
-main, header, cabecalho,footer, wm-nova{
+main, header, cabecalho,footer, wm-nova, .usuarios{
     border: 2px solid black;
 }
 
 .cabecalho {
-    margin-bottom: 5px;
+    margin  : 5px;
+}
+.menu {
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid black;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: yellow;
+    box-shadow: 5px 4px 5px #000;
 }
 
-main {
-    
+header {
     margin: 5px;
+}
+
+
+main {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 5 10 0px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    border-bottom-left-radius: 70%;
+    border-top-right-radius: 70%;
+    
+}
+main > span{
+    width: 25vw;
+
+
+}
+main img {
+    height: 50vh;
+    border-radius: 5%;
+
+}
+
+.text-pag{
+    margin-left: 500px;
+    text-align: center;
+    text-justify: auto;
 }
 
 .usuarios img {
     height: 150px;
+    border-radius: 100px;
     
 }
 
@@ -89,8 +138,12 @@ footer  {
     align-content: center;
     align-items: center;
     justify-content: center;
+    grid-column-end: span 2;
+    }
 
-}
+    #usuar{
+        margin-bottom: 50px;
+    }
 
 footer p {
    text-align: center; 
@@ -101,16 +154,22 @@ footer p {
     </style>
 </head>
 <body>
-    <main>Conteúdo</main>
-    <header> <ul>
-            <a href="">Home</a>
-            <a href="">Como Funciona?</a>
-            <a href="">Nosso Time</a>
-            <a href="">Contatos</a>
-    </ul> 
+    <main class="texto-pag">
+        <h1>Como funciona?</h1>
+        <img src="imagens/businessman.png" alt="">
+        <span><p>Disponibilizamos armarios por meio de um aplicativo para que vendedores possam entregar suas emcomendas de forma pratica e mais barata que os fretes comuns. Estaremos em diversos locais de grande movimento, tais como, Estações da CPTM, e do Metro e Terminais de Onibus. 
+        O Processo para ultilizar nosso serviço é bem simples, primeiro é necessario um cadastro pelo nosso  site ou aplicativo, você pode optar por vincular seu cartão de acesso de transporte publico, para agilizar o processo de entrega, logo após realizar o cadastro, basta que o vendedor e o comprardor combine a estação que sera usada, o pagamento e recebimento do valor da venda acontece por meio do nosso aplicativo e esse disponibiliza o valor do produto imediatamente após na conta do vendedor após o comprardor fazer a retirada do produto do armario.        
+        </p></span>
+
+    </main>
+    <header> 
+                <a class="menu" href="">Home</a>
+                <a class="menu" href="">Como Funciona?</a>
+                <a class="menu" href="">Nosso Time</a>
+                <a class="menu" href="">Contatos</a>
 </header>
 <div [wm-nova] class="usuarios">
-    <div>Nosso time!</div>
+    <div id="usuar">Nosso time!</div>
     <div class="user">
     <img src="imagens/user1.png" alt="">
     <img src="imagens/user2.png" alt="">
