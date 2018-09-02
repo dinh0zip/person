@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testando</title>
+    <style>
+    * {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:
+    -webkit-linear-gradient(315deg, hsla(254.89, 94.44%, 41.8%, 1) 0%, hsla(254.89, 94.44%, 41.8%, 0) 70%),
+    -webkit-linear-gradient(65deg, hsla(91.71, 92.6%, 47.99%, 1) 10%, hsla(91.71, 92.6%, 47.99%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(41.93, 92.85%, 45.92%, 1) 15%, hsla(41.93, 92.85%, 45.92%, 0) 80%),
+    -webkit-linear-gradient(227deg, hsla(254.31, 92.26%, 45.5%, 1) 100%, hsla(254.31, 92.26%, 45.5%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(254.89, 94.44%, 41.8%, 1) 0%, hsla(254.89, 94.44%, 41.8%, 0) 70%),
+    linear-gradient(25deg, hsla(91.71, 92.6%, 47.99%, 1) 10%, hsla(91.71, 92.6%, 47.99%, 0) 80%),
+    linear-gradient(315deg, hsla(41.93, 92.85%, 45.92%, 1) 15%, hsla(41.93, 92.85%, 45.92%, 0) 80%),
+    linear-gradient(223deg, hsla(254.31, 92.26%, 45.5%, 1) 100%, hsla(254.31, 92.26%, 45.5%, 0) 70%);
+  }
+}
+header {
+    grid-area: cabecalho;
+}
+
+main {
+    grid-area: conteudo;
+}
+
+footer {
+    grid-area: rodape;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns:  15fr 1fr;
+    grid-template-rows: 100vh 500px 150px;
+    grid-template-areas:
+        'conteudo cabecalho'
+        'usuarios usuarios'
+        'rodape rodape';
+}
+
+main, header, cabecalho,footer, wm-nova{
+    border: 2px solid black;
+}
+
+.cabecalho {
+    margin-bottom: 5px;
+}
+
+main {
+    
+    margin: 5px;
+}
+
+.usuarios img {
+    height: 150px;
+    
+}
+
+footer img {
+    height: 50px;
+    }
+
+
+
+
+footer  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+   
+}
+.usuarios {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.usuarios {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer p {
+   text-align: center; 
+}
+
+
+    
+    </style>
+</head>
+<body>
+    <main>Conteúdo</main>
+    <header> <ul>
+            <a href="">Home</a>
+            <a href="">Como Funciona?</a>
+            <a href="">Nosso Time</a>
+            <a href="">Contatos</a>
+    </ul> 
+</header>
+<div [wm-nova] class="usuarios">
+    <div>Nosso time!</div>
+    <div class="user">
+    <img src="imagens/user1.png" alt="">
+    <img src="imagens/user2.png" alt="">
+    <img src="imagens/user3.png" alt="">
+</div>
+
+</div>
+    <footer> <div class"sociais">
+            <img class="rodape" src="imagens/fb.png" alt="Facebook">
+            <img class="rodape" src="imagens/insta.png" alt="Instagram">
+            <img class="rodape" src="imagens/linkedin.png" alt="Linkedin">
+        </div>
+        <div class="direitos">
+            <P>Projeto desenvolvido na MasterTech no programa Estação Hack.</br> Todos os direitos reservados.</br>2018</P>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    grid-area: cabecalho;
+}
+
+main {
+    grid-area: conteudo;
+}
+
+footer {
+    grid-area: rodape;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas:
+        'cabecalho'
+        'conteudo'
+        'rodape';
+}
+
+.cabecalho, .conteudo, .rodape {
+    background-color: yellow;
+}
